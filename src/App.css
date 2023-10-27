@@ -1,38 +1,88 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Center the app in the middle of the screen */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #f7f7f7;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the question container */
+.Question {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Style the question text */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style the answer options */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Style the selected option */
+button.selected {
+  background-color: #e74c3c;
+}
+
+/* Style the Submit button */
+button.submit {
+  background-color: #27ae60;
+}
+
+/* Style the Score component */
+.Score {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the Restart button in the Score component */
+.Score button {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .Question, .Score {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #2980b9;
 }
